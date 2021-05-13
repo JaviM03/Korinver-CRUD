@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/JaviM03/Korinver-CRUD/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Esta aplicación es un simple To-Do List para la administración de un hospital y así agilizar los procesos que se llevan a cabo dentro de este.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Para esta aplicación se trabajó para el **back-end** con *node.js + express* al igual que se hizo uso de *Sequelize* para el mapeo objeto-relacional y se ha usado PostgreSQL como motor de base de datos. 
+La estructura del proyecto es la siguiente:
 
-### Markdown
+![image](https://user-images.githubusercontent.com/37260688/118061830-fdb32b80-b352-11eb-801a-ccbc18ec62b4.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+El contenido de las carpetas es la siguiente:
 
-```markdown
-Syntax highlighted code block
+- config: la carpeta config contiene el archivo *db.config.js* en el cual se hace la configuración a la base de datos.
+- controllers: en esta carpeta se encuentra el archivo *list.controllers.js*, donde se han configurado todos los controladores de los métodos a utilizar en nuestra app, entre ellos están:
 
-# Header 1
-## Header 2
-### Header 3
+  * Create()
+  
+  * FindAll()
+  
+  * FindOne()
+  
+  * Update()
+  
+  * Delete()
+  
+- models: En esta carpeta hay dos archivos:
+  - index.js: Aquí inicializamos *Sequelize*
+  - list.models.js: Definimos *Sequelize*
 
-- Bulleted
-- List
+- routes: En el archivo routes.js definimos la respuesta dada a los endpoints realizados.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JaviM03/Korinver-CRUD/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Para el **front-end** se trabajó con el framework *Vue.js*  con ayuda de las librerias de *Axios* y *Vue router*.
